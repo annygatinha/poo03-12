@@ -1,0 +1,28 @@
+5 Usando um vetor do exercício anteriorr, calcule e exiba:
+      A soma total dos números;
+      A média aritmética dos valores. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[10];
+    int soma = 0;
+
+    // Entrada dos valores
+    cout << "Digite 10 numeros inteiros:\n";
+    for (int i = 0; i < 10; i++) {
+        cout << "Valor " << i + 1 << ": ";
+        cin >> numeros[i];
+        soma += numeros[i];   // acumula a soma
+    }
+
+    // Cálculo da média
+    double media = soma / 10.0;
+
+    // Saída
+    cout << "\nSoma total = " << soma << endl;
+    cout << "Media aritmetica = " << media << endl;
+
+    return 0;
+}
