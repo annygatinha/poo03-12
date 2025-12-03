@@ -1,0 +1,26 @@
+4 Crie um programa que:
+    Possua um vetor de números inteiros;
+    Peça ao usuário para digitar os valores;
+    Exiba todos os valores digitados.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[10];   // Vetor de 10 inteiros
+
+    // Entrada dos valores
+    cout << "Digite 10 numeros inteiros:\n";
+    for (int i = 0; i < 10; i++) {
+        cout << "Valor " << i + 1 << ": ";
+        cin >> numeros[i];
+    }
+
+    // Exibe os valores digitados
+    cout << "\nValores digitados:\n";
+    for (int i = 0; i < 10; i++) {
+        cout << "numeros[" << i << "] = " << numeros[i] << endl;
+    }
+
+    return 0;
+}
