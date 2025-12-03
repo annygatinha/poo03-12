@@ -1,0 +1,43 @@
+7Crie um vetor com 10 números digitados pelo usuário.
+      Depois peça um número X e informe:
+      Se X está no vetor
+      em qual posição ele aparece pela primeira vez
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeros[10];
+    int x;
+
+    // Entrada dos valores no vetor
+    cout << "Digite 10 numeros inteiros:\n";
+    for (int i = 0; i < 10; i++) {
+        cout << "Valor " << i + 1 << ": ";
+        cin >> numeros[i];
+    }
+
+    // Entrada do valor X
+    cout << "\nDigite o numero X que deseja procurar: ";
+    cin >> x;
+
+    // Procurando X no vetor
+    int posicao = -1;  // -1 indica que não achou
+
+    for (int i = 0; i < 10; i++) {
+        if (numeros[i] == x) {
+            posicao = i;  // guarda a posição
+            break;        // para ao encontrar a primeira ocorrência
+        }
+    }
+
+    // Saída
+    if (posicao == -1) {
+        cout << "\nO numero " << x << " NAO esta no vetor.\n";
+    } else {
+        cout << "\nO numero " << x << " esta no vetor.\n";
+        cout << "Primeira ocorrencia na posicao: " << posicao << endl;
+    }
+
+    return 0;
+}
