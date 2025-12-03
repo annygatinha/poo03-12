@@ -1,0 +1,23 @@
+Explica o que significa índice e qual o intervalo válido para um vetor int notas[10];
+Ìndice é a posição usada para acessar um elemento dentro de um vetor. Cada elemento do vetor pode ser acessado escrevendo o nome do vetor seguido de um número entre colchetes:
+int notas[10];
+ex:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int notas[10];
+
+    // Preenchendo o vetor
+    for (int i = 0; i < 10; i++) {
+        notas[i] = i * 10;   // só um exemplo: 0, 10, 20, 30...
+    }
+
+    // Acessando e imprimindo o vetor
+    cout << "Valores do vetor:\n";
+    for (int i = 0; i < 10; i++) {
+        cout << "notas[" << i << "] = " << notas[i] << endl;
+    }
+
+    return 0;
+}
